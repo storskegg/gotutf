@@ -1,0 +1,12 @@
+# stoopid files
+.DS_store
+
+# vendor files
+node_modules/
+
+# build files
+build/
+dist/
+
+# temp files
+.cache/

@@ -1,0 +1,77 @@
+{
+  "name": "gotutf",
+  "version": "0.0.1",
+  "description": "This pen demonstrates how to identify, highlight, \"entitize,\" and remove special characters as defined as ascii characters beyond decimal 127, as well as UTF characters.",
+  "main": "src/electron.js",
+  "scripts": {
+    "react-start": "parcel -p 3000 index.html --out-dir build",
+    "react-build": "parcel build index.html --out-dir build --public-url ./",
+    "electron-build": "electron-builder -mwl",
+    "clean-build": "rm -rf build/ .cache dist/",
+    "build": "npm run clean-build && npm run react-build && npm run electron-build",
+    "start": "concurrently \"cross-env BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron . \""
+  },
+  "build": {
+    "appId": "com.boskysoft",
+    "files": [
+      "src/electron.js",
+      "src/assets/*",
+      "build/**/*"
+    ],
+    "mac": {
+      "target": "dmg",
+      "icon": "src/assets/logo.png"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "src/assets/logo.png"
+    },
+    "linux": {
+      "target": "deb",
+      "icon": "src/assets/logo.png",
+      "category": "Development"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/storskegg/gotutf.git"
+  },
+  "keywords": [
+    "utf",
+    "electron",
+    "parcel",
+    "react"
+  ],
+  "author": "Liam Conrad",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/storskegg/gotutf/issues"
+  },
+  "homepage": "./",
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "electron-is-dev": "^1.2.0",
+    "lodash": "^4.17.15",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "@babel/preset-react": "^7.10.1",
+    "@babel/preset-typescript": "^7.10.1",
+    "@types/electron": "^1.6.10",
+    "@types/react": "^16.9.38",
+    "@types/react-dom": "^16.9.8",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-typescript": "^7.0.0-alpha.19",
+    "concurrently": "^5.2.0",
+    "cross-env": "^7.0.2",
+    "electron": "^9.0.5",
+    "electron-builder": "^22.7.0",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.9.5",
+    "wait-on": "^5.0.1"
+  }
+}
