@@ -49,7 +49,7 @@
   },
   "homepage": "./",
   "dependencies": {
-    "bootstrap": "^4.5.0",
+    "bootstrap": "^4.6.2",
     "electron-is-dev": "^1.2.0",
     "lodash": "^4.17.15",
     "react": "^16.13.1",
