@@ -51,7 +51,7 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "electron-is-dev": "^1.2.0",
-    "lodash": "^4.17.17",
+    "lodash": "^4.17.23",
     "react": "^16.14.0",
     "react-dom": "^16.13.1"
   },
